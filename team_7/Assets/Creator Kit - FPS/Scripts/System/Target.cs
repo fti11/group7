@@ -28,7 +28,7 @@ public class Target : MonoBehaviour
     void Start()
     {
         if(DestroyedEffect)
-            PoolSystem.Instance.InitPool(DestroyedEffect, 16);
+            //PoolSystem.Instance.InitPool(DestroyedEffect, 16);
         
         m_CurrentHealth = health;
         if(IdleSource != null)
