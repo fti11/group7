@@ -4,6 +4,14 @@ using UnityEngine;
 
 public class ProjectTileMove : MonoBehaviour
 {
+    void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "Monster")
+        {
+            other.gameObject.GetComponent<Emeny>().Damage(1);
+            Destroy(this.gameObject);
+        }
+    }
 
     // Start is called before the first frame update
     void Start()
