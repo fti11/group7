@@ -154,7 +154,7 @@ GameObject:
   - component: {fileID: 1043231934573736605}
   m_Layer: 0
   m_Name: Player_001
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -262,6 +262,7 @@ MonoBehaviour:
     type: 3}
   FilePoint: {fileID: 1043231933543399013}
   movementMagnitude: 0
+  playertype: 0
 --- !u!54 &1043231934573736605
 Rigidbody:
   m_ObjectHideFlags: 0
