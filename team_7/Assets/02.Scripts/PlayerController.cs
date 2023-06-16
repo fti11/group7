@@ -1,8 +1,8 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
-
     public enum PlayerType
     {
         Player001,
@@ -12,6 +12,10 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed = 5f;  // 플레이어 이동 속도
     public float rotationSpeed = 200f;  // 플레이어 회전 속도
     public Transform cameraTransform;  // 카메라 Transform 컴포넌트
+
+    public int maxHp;
+    public int nowHp;
+    public Image nowHpbar;
 
     private Rigidbody rb;  // Rigidbody 컴포넌트 참조
 
@@ -37,6 +41,9 @@ public class PlayerController : MonoBehaviour
             GamePadVertical = "Vertical2";
             GamePadVHorizontal = "Horizontal2";
         }
+
+        maxHp = 50;
+        nowHp = 50;
     }
 
     private void Update()
@@ -59,6 +66,8 @@ public class PlayerController : MonoBehaviour
             temp.transform.forward = FilePoint.transform.forward;
 
         }
+
+        nowHpbar.fillAmount = (float)nowHp / (float)maxHp;
     }
 
     private void FixedUpdate()
@@ -112,7 +121,7 @@ public class PlayerController : MonoBehaviour
 
         }
 
-       
+      
 
     }
 }

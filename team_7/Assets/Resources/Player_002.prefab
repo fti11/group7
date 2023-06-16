@@ -256,6 +256,10 @@ MonoBehaviour:
   moveSpeed: 10
   rotationSpeed: 200
   cameraTransform: {fileID: 1681116008102817524}
+  maxHp: 0
+  nowHp: 0
+  nowHpbar: {fileID: 4115252128344902151, guid: f96501f824e8d4e4cb4fdf302acca953,
+    type: 3}
   animationActions: {fileID: 1681116007821808115}
   RunFlag: 0
   ProjectTile: {fileID: 5852310098435149494, guid: 6520b24b4f17d9547953bc56c6a50ef6,

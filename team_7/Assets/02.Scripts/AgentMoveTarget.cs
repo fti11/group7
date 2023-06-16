@@ -50,7 +50,7 @@ public class AgentMoveTarget : MonoBehaviour
 
                 if (temp != null)
                 {
-                    if(Vector3.Distance(temp.transform.position , this.gameObject.transform.position) < 10.0f)
+                    if(Vector3.Distance(temp.transform.position , this.gameObject.transform.position) < 50.0f)
                     {
                         agent.destination = temp.transform.position;
                     }

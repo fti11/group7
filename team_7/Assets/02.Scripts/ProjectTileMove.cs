@@ -22,7 +22,7 @@ public class ProjectTileMove : MonoBehaviour
     private void FixedUpdate()
     {
         //시간대비 이동 량 float 값으로 선언
-        float moveAmount = 50 * Time.fixedDeltaTime;
+        float moveAmount = 75 * Time.fixedDeltaTime;
         //launchDirection 방향으로 발사체 이동 (Translate) 이동 시키는 함수
         transform.Translate(Vector3.forward * moveAmount);
     }
