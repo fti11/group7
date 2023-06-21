@@ -7,28 +7,15 @@ using UnityEngine.UI;
 public class UIManager : MonoBehaviour
 {
     public GameObject Button_Start;
-    public GameObject Button_HowTo;
-    public GameObject PanelHowTo;
-    public GameObject Button_Back;
-
-    void Start()
-    {
-        PanelHowTo.SetActive(false);
-
-    }
+    public GameObject Button_Quit;
 
     public void ButtonStart_Clicked()
     {
-        SceneManager.LoadScene("GameScene");
+        SceneManager.LoadScene("Classroom");
     }
 
-    public void ButtonHowTo_Clicked()
+    public void ButtonQuit_Clicked()
     {
-        PanelHowTo.SetActive(true);
-    }
-
-    public void ButtonBack_Clicked()
-    {
-        PanelHowTo.SetActive(false);
+        Application.Quit();
     }
 }

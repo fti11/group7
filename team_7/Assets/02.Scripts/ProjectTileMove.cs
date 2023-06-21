@@ -8,7 +8,7 @@ public class ProjectTileMove : MonoBehaviour
     {
         if(other.gameObject.tag == "Monster")
         {
-            other.gameObject.GetComponent<Emeny>().Damage(1);
+            other.gameObject.GetComponent<Enemy>().Damage(1);
             Destroy(this.gameObject);
         }
     }
