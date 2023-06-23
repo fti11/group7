@@ -11,7 +11,7 @@ public class UIManager : MonoBehaviour
 
     public void ButtonStart_Clicked()
     {
-        SceneManager.LoadScene("Classroom");
+        SceneManager.LoadScene("02.Classroom");
     }
 
     public void ButtonQuit_Clicked()
