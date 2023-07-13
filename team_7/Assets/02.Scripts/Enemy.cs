@@ -4,21 +4,11 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    public int monsterID; // 몬스터 고유 식별자(ID)
+
     public int Health = 10;
 
     public GameObject DestroyedEffect;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void Damage(int attackpower)
     {
@@ -26,13 +16,16 @@ public class Enemy : MonoBehaviour
 
         if(Health <= 0)
         {
-            GameObject Temp = Instantiate(DestroyedEffect);
-            Temp.transform.position = this.gameObject.transform.position;
-            Destroy(Temp, 3.0f);
-            Destroy(this.gameObject);
-
+            Die();         
         }
+    }
 
-
+    public void Die()
+    {
+        GameObject Temp = Instantiate(DestroyedEffect);
+        Temp.transform.position = this.gameObject.transform.position;
+        Destroy(Temp, 3.0f);
+        Destroy(this.gameObject);
+        StageManager.Instance.OnMonsterDeath(monsterID);
     }
 }
