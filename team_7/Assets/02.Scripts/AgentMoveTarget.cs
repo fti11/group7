@@ -19,6 +19,7 @@ public class AgentMoveTarget : MonoBehaviour
     public float searchLoop = 2.0f;
 
     public NavMeshAgent agent;
+    public float distance = 0.0f;
 
     public AGENTTYPE agenttype = AGENTTYPE.ENEMY;
 
@@ -39,7 +40,7 @@ public class AgentMoveTarget : MonoBehaviour
 
     void DoSearchLoop()
     {
-        searchTimer += 1;
+        searchTimer += Time.deltaTime;
         if (searchLoop <= searchTimer)
         {
             searchTimer = 0;
@@ -50,7 +51,8 @@ public class AgentMoveTarget : MonoBehaviour
 
                 if (temp != null)
                 {
-                    if(Vector3.Distance(temp.transform.position , this.gameObject.transform.position) < 50.0f)
+                    distance = Vector3.Distance(temp.transform.position, this.gameObject.transform.position);
+                    if (distance < 250.0f)
                     {
                         agent.destination = temp.transform.position;
                     }

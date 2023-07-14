@@ -288,7 +288,7 @@ AnimatorController:
   - serializedVersion: 5
     m_Name: Aiming
     m_StateMachine: {fileID: 8169219206125567473}
-    m_Mask: {fileID: 0}
+    m_Mask: {fileID: 31900000, guid: 2008162a14ba33540a369363a5a1e294, type: 2}
     m_Motions: []
     m_Behaviours: []
     m_BlendingMode: 0
@@ -560,7 +560,7 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 502066242692759447}
-    m_Position: {x: 360, y: 290, z: 0}
+    m_Position: {x: 330, y: 210, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
